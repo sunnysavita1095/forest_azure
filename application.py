@@ -8,7 +8,9 @@ import numpy as np
 import pandas as pd
 
 
-app = Flask(__name__)
+application = Flask(__name__) # initializing a flask app
+app=application
+
 
 scalarobject=bz2.BZ2File("Model\standardScalar.pkl", "rb")
 scaler=pickle.load(scalarobject)
