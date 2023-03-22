@@ -10,7 +10,6 @@ import pandas as pd
 
 app = Flask(__name__)
 CORS(app)
-app.config['DEBUG'] = True
 
 scalarobject=bz2.BZ2File("Model\standardScalar.pkl", "rb")
 scaler=pickle.load(scalarobject)
