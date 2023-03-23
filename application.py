@@ -3,10 +3,8 @@ from flask import Flask, request,render_template
 from flask import Response
 from flask_cors import CORS
 import pickle
-import bz2
 import numpy as np
 import pandas as pd
-import pickle
 
 
 application = Flask(__name__) # initializing a flask app
