@@ -1,5 +1,5 @@
 from wsgiref import simple_server
-from flask import Flask, request, app,render_template
+from flask import Flask, request,render_template
 from flask import Response
 from flask_cors import CORS
 import pickle
