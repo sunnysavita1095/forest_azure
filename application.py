@@ -6,16 +6,16 @@ import pickle
 import bz2
 import numpy as np
 import pandas as pd
+import pickle
 
 
 application = Flask(__name__) # initializing a flask app
 app=application
 
 
-scalarobject=bz2.BZ2File(".\Model\standardScalar.pkl", "rb")
-scaler=pickle.load(scalarobject)
-modelforpred = bz2.BZ2File(".\Model\modelForPrediction.pkl", "rb")
-model = pickle.load(modelforpred)
+scaler=pickle.load(open('Model/standardScalar.pkl','rb'))
+model=pickle.load(open('Model/modelForPrediction.pkl','rb'))
+
 
 ## Route for homepage
 
@@ -54,4 +54,4 @@ def predict_datapoint():
 
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0",port=8000)
+    app.run(host="0.0.0.0")
